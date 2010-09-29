@@ -1,0 +1,9 @@
+To create the HTML documentation, there are two options:
+1) Standard Javadoc
+	* execute "ant -f javadoc"
+	* the documentation will be created in the the "doc" folder
+2) "DroidDoc"
+	* place the opennfc directory (the directory where this README file is stored) in the "external" directory of the Android source code tree
+	* execute "mm opennfc_library-docs"
+	* the documentation will be created in the ../../out/target/common/docs/opennfc_library folder
+
