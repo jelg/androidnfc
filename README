@@ -7,3 +7,6 @@ To create the HTML documentation, there are two options:
 	* execute "mm opennfc_library-docs"
 	* the documentation will be created in the ../../out/target/common/docs/opennfc_library folder
 
+
+Please note that the Javadoc is limited compared to the "DroidDoc" and currently does not contain overviews and guides (e.g. the NFC intent description).
+
