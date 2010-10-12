@@ -1,4 +1,4 @@
-package org.opennfc.ndef;
+package android.nfc.ndef;
 
 import java.nio.ByteBuffer;
 import android.content.Intent;
