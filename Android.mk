@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2010 Inside Contactless
 # Copyright (C) 2010 Sony Ericsson Mobile Communications AB
+# Copyright (C) 2010 France Telecom
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,8 +29,9 @@ include $(CLEAR_VARS)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(call all-subdir-java-files) $(call all-subdir-html-files)
+#LOCAL_SRC_FILES :=                                $(call all-subdir-html-files)
 
-LOCAL_MODULE:= opennfc_library
+LOCAL_MODULE:= androidnfc_library
 LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 LOCAL_DROIDDOC_USE_STANDARD_DOCLET := false
 LOCAL_DROIDDOC_HTML_DIR := html
