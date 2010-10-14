@@ -25,7 +25,10 @@ sdk.redirect=0
 </ol>
 
 <h2>See also</h2>
-<a href="{@docRoot}guide/topics/intents/intents-filters.html">Intents and Intent Filters</a>.
+<ol>
+<li><a href="{@docRoot}guide/nfc-permissions.html">NFC permissions</a>
+<li><a href="{@docRoot}guide/topics/intents/intents-filters.html">Intents and Intent Filters</a>
+</ol>
 </div>
 </div>
 <p>
@@ -79,6 +82,7 @@ made to the user by higher layers.
 	<td>-</td>
 	<td>int "event" : contains indication that a tag is being read or that reading has ended<ul><li>NFC_TAG_DETECTED<li>NFC_FIELD_OFF</ul></td>
 </tr></table>
+Receiving this intent requires the <a href="{@docRoot}guide/nfc-permissions.html#permissions">NFC_ADMIN</a> permission.
 
 <h3 id="tagread">Tag successfully read intent</h3>
 
@@ -104,6 +108,7 @@ This intent is an ordered broadcast type of event. It should be primarily handle
 	<td>-</td>
 	<td>byte [] "data" : whole tag binary contents.</td>
 </tr></table>
+Receiving this intent requires the <a href="{@docRoot}guide/nfc-permissions.html#permissions">NFC</a> permission.
 
 <h3 id="targetdiscovered">Target discovered message</h3>
 
@@ -130,6 +135,7 @@ When an NFC target was discovered that could not be entirely read by the NFC sta
 
 <p>
 Once registered for a particular technology type, the client applications can then examine each event and decide to handle the target or not. 
+Receiving this intent requires the <a href="{@docRoot}guide/nfc-permissions.html#permissions">NFC</a> permission.
 
 <h2 id="highlevel">NDEF message intents</h2>
 <p>
@@ -192,6 +198,7 @@ override the default smart poster application.
  <li>ndef://rtd_external/urn:nfc:ext:nokia.com:bt</li>
 </ul>
 
+Receiving this intent requires the <a href="{@docRoot}guide/nfc-permissions.html#permissions">NFC</a> permission.
 
 <h1>Card emulation</h1>
 
@@ -216,6 +223,8 @@ This event will be reported into the system by the NFC stack with the following 
 	<td><p>nfc:/secure_element:<i>&lt;se_id&gt;</i>/<i>&lt;AID&gt;</i><p>where <i>&lt;se_id&gt;</i> identifies the secure element originating the push request <p><i>&lt;AID&gt;</i> identifies the application that triggered the push</td>
 	<td><ul><li>byte [] "AID" : AID of the card application<li>byte [] "extra" : extra data in the HCI event</td>
 </tr></table>
+
+Receiving this broadcast requires the <a href="{@docRoot}guide/nfc-permissions.html#permissions">NFC_TRANSACTION</a> permission.
 
 <h1 id="peertopeer">Peer to peer</h1>
 

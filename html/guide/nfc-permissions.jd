@@ -19,19 +19,20 @@ sdk.redirect=0
 
 <h2>See also</h2>
 <p>
-<a href="{@docRoot}guide/topics/topics/androidnfc_library/guide/nfc-intents.html">NFC Intents</a>.
+<a href="{@docRoot}guide/nfc-intents.html">NFC Intents</a>
 <p>
-<a href="{@docRoot}guide/topics/topics/security/security.html">Security and permissions</a>.
+<a href="{@docRoot}guide/topics/security/security.html">Security and permissions</a>
 </div>
 </div>
 <p>
-<h1>NFC permissions</h1>
+<h1 id="permissions">NFC permissions</h1>
 <p>
 
 <table> 
 <tr><th scope="col">Permission</th> <th scope="col">Type</th> <th scope="col">Description</th></tr>
 <tr><td>android.nfc.NFC</td> <td>normal</td> <td>Allows basic functions related to NFC, such as catching user feedback broadcasts
 and performing basic target interaction such as tag reading and writing.</td></tr>
-<tr><td>android.nfc.NFC_ADMIN</td><td>Dangerous</td><td>Permission required to perform administrative tasks such as 
-switching NFC on and off, or configuring the polling mode.</td>
+<tr><td>android.nfc.NFC_ADMIN</td><td>signatureOrSytem</td><td>Permission required to perform administrative tasks such as 
+switching NFC on and off, or configuring the polling mode.</td></tr>
+<tr><td>android.nfc.NFC_TRANSACTION</td> <td>signature</td><td>Permission needed for an application to receive certain restricted SE push messages.</td></tr>
 </table>
