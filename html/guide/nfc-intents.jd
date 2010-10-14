@@ -28,8 +28,13 @@ sdk.redirect=0
 <a href="{@docRoot}guide/topics/intents/intents-filters.html">Intents and Intent Filters</a>.
 </div>
 </div>
-
-
+<p>
+NFC is mostly used in 3 ways : 
+<ul><li>in NFC target reading/writing use cases where the phone acts as a reader
+<li>in card emulation whereby the phone and its associated secure element act as a target (an ISO14443-4 card)
+<li>in peer-to-peer mode where for instance two phones can use the NFC carrier to exchange messages
+</ul>
+<h1>Target reading</h1>
 <p>
 
 Tag reading and other target discovery is handled in the NFC stack, which then generates a number of events
@@ -188,9 +193,11 @@ override the default smart poster application.
 </ul>
 
 
+<h1>Card emulation</h1>
+
   
 <h2 id="cardtransaction">Card emulation events</h2>
-
+<p>
 When the NFC handset performs card emulation through SWP/HCI with the SIM card or another secure element, there
 is a way for the targeted card application to wake up its companion phone application through a push message.
 <p>
@@ -209,4 +216,6 @@ This event will be reported into the system by the NFC stack with the following 
 	<td><p>nfc:/secure_element:<i>&lt;se_id&gt;</i>/<i>&lt;AID&gt;</i><p>where <i>&lt;se_id&gt;</i> identifies the secure element originating the push request <p><i>&lt;AID&gt;</i> identifies the application that triggered the push</td>
 	<td><ul><li>byte [] "AID" : AID of the card application<li>byte [] "extra" : extra data in the HCI event</td>
 </tr></table>
+
+<h1 id="peertopeer">Peer to peer</h1>
 
