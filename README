@@ -5,7 +5,7 @@ To create the HTML documentation, there are two options:
 2) "DroidDoc"
 	* place the androidnfc directory (the directory where this README file is stored) in the "external" directory of the Android source code tree
 	* execute "mm androidnfc_library-docs"
-	* the documentation will be created in the ../../out/target/common/docs/opennfc_library folder
+	* the documentation will be created in the ../../out/target/common/docs/androidnfc_library folder
 
 
 Please note that the Javadoc is limited compared to the "DroidDoc" and currently does not contain overviews and guides (e.g. the NFC intent description).
